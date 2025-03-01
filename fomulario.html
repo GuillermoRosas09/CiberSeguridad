@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscripción al Taller</title>
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('utvt.jpg'); 
+            background-size: cover;
+            background-position: center;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            color: #2c3e50;
+        }
+
+     
+        .form-container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9); 
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            box-sizing: border-box; 
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            border-color: #3498db;
+            outline: none;
+        }
+
+        .aviso {
+            background-color: #e9f5ff;
+            padding: 15px;
+            border-left: 5px solid #3498db;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            font-size: 14px;
+            color: #2c3e50;
+        }
+
+        .aviso strong {
+            color: #3498db;
+        }
+
+        .submit-button {
+            width: 100%;
+            padding: 10px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .submit-button:hover {
+            background-color: #2980b9;
+        }
+
+        /* Estilos responsivos */
+        @media (max-width: 768px) {
+            .form-container {
+                margin: 10px;
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .form-group input,
+            .form-group select,
+            .form-group input[type="file"] {
+                font-size: 14px;
+            }
+
+            .submit-button {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 20px;
+            }
+
+            .form-group input,
+            .form-group select,
+            .form-group input[type="file"] {
+                padding: 8px;
+            }
+
+            .submit-button {
+                padding: 8px;
+            }
+
+            .aviso {
+                font-size: 12px;
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 360px) {
+            h1 {
+                font-size: 18px;
+            }
+
+            .form-group input,
+            .form-group select,
+            .form-group input[type="file"] {
+                padding: 6px;
+                font-size: 12px;
+            }
+
+            .submit-button {
+                padding: 6px;
+                font-size: 12px;
+            }
+
+            .aviso {
+                font-size: 11px;
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Inscripción al Taller Universitario</h1>
+    <div class="form-container">
+        <div class="aviso">
+            <strong>Nota:</strong> Los datos personales que nos proporcionas son únicamente para asignarte un horario y lugar en los nuevos talleres. Tu información será tratada con confidencialidad.
+        </div>
+        <form action="imagen.html" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+
+            <div class="form-group">
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+            </div>
+
+            <div class="form-group">
+                <label for="matricula">Matrícula:</label>
+                <input type="text" id="matricula" name="matricula" required>
+            </div>
+
+            <div class="form-group">
+                <label for="taller">Taller de Interés:</label>
+                <select id="taller" name="taller" required>
+                    <option value="taller1">Taller de Programación</option>
+                    <option value="taller2">Taller de Diseño Gráfico</option>
+                    <option value="taller3">Taller de Marketing Digital</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="imagen">Subir Imagen de tu Credencial:</label>
+                <input type="file" id="imagen" name="imagen" accept="image/*" required>
+                <small>Sube una imagen de tu identificación oficial para validar tus datos.</small>
+            </div>
+
+            <button type="submit" class="submit-button">Inscribirse</button>
+        </form>
+    </div>
+</body>
+</html>
